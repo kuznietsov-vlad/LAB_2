@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f9;
+    color: #222222;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Стилі таблиці для Завдання 1 */
+table {
+    border-collapse: collapse;
+    width: 650px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+td {
+    border: 2px solid #555;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 1-й рядок: фон #078f8f (для варіанта 7, де nn=07) */
+.row-1 {
+    background-color: #078f8f;
+    color: #ffffff;
+}
+
+/* 2-й рядок: фон #f5f507 */
+.row-2 {
+    background-color: #f5f507;
+    color: #000000;
+}
+
+/* Ефект наведення (hover) — інверсія кольорів */
+.row-1:hover {
+    background-color: #f5f507;
+    color: #000000;
+}
+
+.row-2:hover {
+    background-color: #078f8f;
+    color: #ffffff;
+}
+
+/* Стилі для Завдання 2 (Годинник за Варіантом 7) */
+.clock-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.clock-face {
+    width: 220px;
+    height: 220px;
+    background-color: #e6e6e6;
+    border: 3px solid #333;
+    border-radius: 35px; /* Закруглені кути як на макеті */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Червоні точки на циферблаті */
+.dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #ff0000;
+    border: 1px solid #990000;
+    border-radius: 50%;
+}
+
+.dot.top {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot.bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot.left {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot.right {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Стрілки годинника */
+.hand {
+    position: absolute;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+/* Хвилинна стрілка (дивиться вгору на 12) */
+.minute-hand {
+    width: 5px;
+    height: 75px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Годинна стрілка (дивиться вправо на 3) */
+.hour-hand {
+    width: 60px;
+    height: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
